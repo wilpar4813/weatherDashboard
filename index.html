@@ -20,17 +20,20 @@
                 <div class="row" id="searchBarRow">
                     <h6>Search for a city:</h6>
                     <form class="form-inline">
-                        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+                        <input aria-label="Search" class="form-control mr-sm-2" id="locale" placeholder="Search" type="search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" id="submitWeather" type="button"></button>
                     </form>
+                    <div id="error"></div>
                 </div>
-                <div class="row" id="historyRow"></div>
+                <div class="row" id="historyRow">
+                        <div id="buttons-view"></div>
+                </div>
             </div>
             <!-- DEFINES FIRST COLUMN -->
             <div class="column" id="weatherColumn">
                 <div class="row" id="currentWeatherRow">
                     <div id="borderBox">
-                            <div class="city"></div>
+                            <div class="city"><p id="time"></p></div>
                             <div class="temp"></div>
                             <div class="humidity"></div>
                             <div class="wind"></div>
@@ -43,22 +46,34 @@
                 </div>
                 <div class="row" id="dayContainer">
                     <div class="column" id="dayColumn">
-                        <div id="forcastBox"></div>
+                        <div id="forcastBox">
+                                <p id="timeOne"></p>
+                        </div>
                     </div>
                     <div class="column" id="dayColumn">
-                        <div id="forcastBox"></div>
+                        <div id="forcastBox">
+                                <p id="timeTwo"></p>
+                        </div>
                     </div>
                     <div class="column" id="dayColumn">
-                        <div id="forcastBox"></div>
+                        <div id="forcastBox">
+                                <p id="timeThree"></p>
+                        </div>
                     </div>
                     <div class="column" id="dayColumn">
-                        <div id="forcastBox"></div>
+                        <div id="forcastBox">
+                                <p id="timeFour"></p>
+                        </div>
                     </div>
                     <div class="column" id="dayColumn">
-                        <div id="forcastBox"></div>
+                        <div id="forcastBox">
+                                <p id="timeFive"></p>
+                        </div>
                     </div>
                 </div>
             </body>
         </html>
+        <script src="lib/moment..min.js"></script>
+        <script src="develop/script.js"></script>
     </body>
 </html>
