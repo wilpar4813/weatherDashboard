@@ -18,8 +18,12 @@ $(document).ready(function () {
 
         //add new city to cities
         if(newCity != ""){
-        cities.push(newCity);
+        cities.unshift(newCity);
         cities = Array.from(new Set(cities));
+        if(cities.length >= 10){
+            cities.pop();
+        }
+        //cities.reverse();
 }// Remove any appointments previosly scheduled at the same time as new appointment.
        
         console.log(cities);

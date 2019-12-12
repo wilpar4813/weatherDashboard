@@ -135,5 +135,11 @@ header{
     border:1px solid #cccccc;
 }
 #buttons-view{
+    position: relative;
     width:100%;
+}
+
+#clearStorage{
+    position: absolute;
+    bottom:0;
 }
