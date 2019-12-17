@@ -13,32 +13,32 @@ $(document).ready(function () {
         // Create array to store high scores
         cities = JSON.parse(localStorage.getItem("cities")) || [];
 
-        console.log(cities);
+        //console.log(cities);
 
         // add new city to cities
         if (newCity != "") {
             cities.unshift(newCity);
             cities = Array.from(new Set(cities));
-            if (cities.length >= 10) {
+            if (cities.length >= 12) {
                 cities.pop();
             }
             // cities.reverse();
         } // Remove any appointments previosly scheduled at the same time as new appointment.
 
-        console.log(cities);
+        //console.log(cities);
         // Update local storage with revised cities
         localStorage.setItem('cities', JSON.stringify(cities));
-        console.log(cities);
+        //console.log(cities);
         // The city from the textbox is then added to our array
         var city = $("#locale").val();
         // calling renderButtons which handles the processing of our city array
         renderButtons();
-        console.log(city);
+        //console.log(city);
         getTheWeather(city);
 
     });
     $(document).on("click", ".fatCity", function () {
-        console.log("fatCity button pushed");
+        //console.log("fatCity button pushed");
         var city = $(this).attr("data-name");
         getTheWeather(city);
     });
@@ -77,29 +77,45 @@ function postToHtml(response) { // Converts the temp to Kelvin with the below fo
     // var iconcode = response.weather.icon;
     // var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     // console.log(iconurl);
-    $(".city").html("<h1>" + response.name + " (" + startDate.format('L') + ") </h1>");
+    $(".city").html("<h1>" + response.name + ": " + startDate.format('dddd') + ",  " + startDate.format('LL') + "</h1>");
     // $("#wicon").attr('src', iconurl);
     $(".wind").text("Wind Speed: " + response.wind.speed.toFixed(0) + " mph");
     $(".humidity").text("Humidity: " + response.main.humidity + "%");
     $(".temp").text("Temperature: " + tempF.toFixed(0) + "°F");
 
     // Log the data in the console as well
-    console.log("Wind Speed: " + response.wind.speed);
-    console.log("Humidity: " + response.main.humidity);
-    console.log("Temperature (F): " + tempF);
+    //console.log("Wind Speed: " + response.wind.speed);
+    //console.log("Humidity: " + response.main.humidity);
+    //console.log("Temperature (F): " + tempF);
 
 };
-// Transfer five day forcast content to HTML
-function fiveDayForcast(response) {
-    for (i = 0; i < 5; i ++) {
-        if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-            var tempF = list[i].main.temp;
-            $("#dayContainer").html("<div class='column' id='dayColumn'><div id='forcastBox'><p id='time'" + i + 1 + "></p> <div class='weatherIcon'></div><div class='temp'></div><div class='humidity'></div></div>'")
-            $(".weatherIcon").append(response.list[i].weather.icon);
-            $(".humidity").text("Humidity: " + response.list[i].main.humidity + "%");
-            $(".temp").text("Temperature: " + tempF.toFixed(0) + "°F");
+// Transfer five day forecast content to HTML
+function fiveDayForecast(response) {
+    $("#dayContainer").empty();
+    var iterator = 0;
+    for (i = 0; i < 40; i ++) {
+        anotherDay = response.list[i].dt_txt;
+        anotherDay = anotherDay.slice(-8);
+        
+        if (anotherDay === "15:00:00") {
+            //console.log(anotherDay);
+            iterator = iterator + 1;
+            //console.log(iterator);
+            var tempF = (response.list[i].main.temp - 273.15) *1.80 +32;
+            $("#dayContainer").append("<div class='column' id='dayColumn'><div id='forecastBox'><p id='time" + iterator + "'></p> <div class='weatherIcon" + iterator + "day'></div><div class='temp" + iterator + "day'></div><div class='humidity" + iterator + "day'></div></div>'");
+            var weatherData = ".weatherIcon" + iterator + "day";
+            //console.log(weatherData);
+            $(weatherData).append(response.list[i].weather.icon);
+            var humidityData = ".humidity" + iterator + "day";
+            //console.log(humidityData);
+            $(humidityData).text("Humidity: " + response.list[i].main.humidity + "%");
+            var tempData = ".temp" + iterator + "day";
+            //console.log(tempData);
+            $(tempData).text("Temperature: " + tempF.toFixed(0) + "°F");
+            //console.log("Another time throught he loop");
         } // End if
     } // End For loop
+    //console.log("I am here");
     $("#time1").html("<h4>" + dateOne.format('dddd') + "<h4>");
     $("#time2").html("<h4>" + dateTwo.format('dddd') + "<h4>");
     $("#time3").html("<h4>" + dateThree.format('dddd') + "<h4>");
@@ -132,12 +148,13 @@ function renderButtons() {
 }
 
 function postUV(data) {
-    $("#uvValue").text("UV Index: " + data.value);
+    $("#uvValue").html("UV Index: <div id = 'dataValue'>" + data.value + "</div>");
     if (data.value > 7) {
-        console.log(data.value);
-        $('#uvValue').css('background', 'red');
+        //console.log(data.value);
+        $('#dataValue').css('background', 'red');
+        //data.attr("data.value", );
     } else {
-        $('#uvValue').css('background', 'white');
+        $('#dataValue').css('background', 'white');
     }
 }
 
@@ -166,7 +183,7 @@ function writeToSchedule() {
 
 }
 function getTheWeather(city) {
-    console.log("getTheWeather function was called")
+    //console.log("getTheWeather function was called")
     if (city != '') {
         $("#error").html(""); // Clears error message field when text is entered
 
@@ -175,30 +192,37 @@ function getTheWeather(city) {
             method: "GET"
         }).then(function (response) {
 
-            console.log(response);
+            //console.log(response);
             postToHtml(response);
             $.ajax({ // AJAX call for UV data
                 url: "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&APPID=05704eed827c348a42aefa846e03d80c",
                 method: "GET"
             }).then(function (data) { // Post UV to HTML.then function data
-                console.log(data);
+                //console.log(data);
                 postUV(data);
 
             });
         });
-        $.ajax({ // AJAX call for 5 day forcast ex...api.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml
-            url: "https://api.openweathermap.org/data/2.5/forcast?q=" + city + ",us&APPID=05704eed827c348a42aefa846e03d80c",
+        $.ajax({ // AJAX call for 5 day forecast ex...api.openweathermap.org/data/2.5/forecast?q=London,us&mode=xml
+            url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + ",us&APPID=790cf6ec7fe5512d347deb73bd7b4690",
             method: "GET"
-        }).then(function (response) { // Post current forcast to HTML.then function response
-            console.log(response);
-            fiveDayForcast(response);
+        }).then(function (response) { // Post current forecast to HTML.then function response
+            //console.log(response);
+            fiveDayForecast(response);
         });
     } else { // Error message if user doesn't enter anything
         $("#error").html('Field cannot be empty');
     }
 }
 function clearStorage() {
-    console.log("Local storage to be cleared");
+    //console.log("Local storage to be cleared");
     localStorage.clear();
     $("#buttons-view").empty();
 }
+/*
+function render() {
+    const renderWeatherIcon = this.state.data.weather.map(item => {
+      return <img src={`http://openweathermap.org/img/w/${item.icon}.png`} />;
+    });
+    return <div>{renderWeatherIcon}</div>;
+  }*/
