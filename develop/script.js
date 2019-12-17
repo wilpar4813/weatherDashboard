@@ -13,7 +13,7 @@ $(document).ready(function () {
         // Create array to store high scores
         cities = JSON.parse(localStorage.getItem("cities")) || [];
 
-        //console.log(cities);
+        //console.log(cities);empty
 
         // add new city to cities
         if (newCity != "") {
@@ -72,17 +72,20 @@ $("#time4").html("<h4>" + dateFour.format('dddd') + "<h4>");
 $("#time5").html("<h4>" + dateFive.format('dddd') + "<h4>");*/
 // Transfer content to HTML
 function postToHtml(response) { // Converts the temp to Kelvin with the below formula
+    $(".icon").empty();
     var tempF = (response.main.temp - 273.15) * 1.80 + 32;
     $(".tempF").text("Temperature" + tempF + "Fahrenheit");
-    // var iconcode = response.weather.icon;
-    // var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    // console.log(iconurl);
+    //var iconCode = data.weather[0].icon;
+    var iconcode = response.weather[0].icon;
+    console.log(iconcode);
+    var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
+    console.log(iconurl);
     $(".city").html("<h1>" + response.name + ": " + startDate.format('dddd') + ",  " + startDate.format('LL') + "</h1>");
-    // $("#wicon").attr('src', iconurl);
+    $(".icon").append("<img src='" + iconurl  + "'>");
     $(".wind").text("Wind Speed: " + response.wind.speed.toFixed(0) + " mph");
     $(".humidity").text("Humidity: " + response.main.humidity + "%");
     $(".temp").text("Temperature: " + tempF.toFixed(0) + "°F");
-
+//api.openweathermap.org/data/2.5/weather
     // Log the data in the console as well
     //console.log("Wind Speed: " + response.wind.speed);
     //console.log("Humidity: " + response.main.humidity);
@@ -103,9 +106,17 @@ function fiveDayForecast(response) {
             //console.log(iterator);
             var tempF = (response.list[i].main.temp - 273.15) *1.80 +32;
             $("#dayContainer").append("<div class='column' id='dayColumn'><div id='forecastBox'><p id='time" + iterator + "'></p> <div class='weatherIcon" + iterator + "day'></div><div class='temp" + iterator + "day'></div><div class='humidity" + iterator + "day'></div></div>'");
+           
+            /*var iconcode = response.list[i].main.weather[0].icon;
+            console.log(iconcode);
+            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
+            console.log(iconurl);*/
+            
+            //$(".icon").append("<img src='" + iconurl  + "'>");
+            
             var weatherData = ".weatherIcon" + iterator + "day";
             //console.log(weatherData);
-            $(weatherData).append(response.list[i].weather.icon);
+            //$(weatherData).append("<img src='" + iconurl  + "'>");
             var humidityData = ".humidity" + iterator + "day";
             //console.log(humidityData);
             $(humidityData).text("Humidity: " + response.list[i].main.humidity + "%");

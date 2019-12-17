@@ -6,7 +6,9 @@ body{
 }
 
 img {
-    opacity: .2;
+    float:right;
+    width:200px;
+    height:200px;
 }
 h4{
     margin:10px 0px 0px 0px;
