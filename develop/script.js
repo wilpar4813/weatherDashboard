@@ -80,8 +80,9 @@ function postToHtml(response) { // Converts the temp to Kelvin with the below fo
     console.log(iconcode);
     var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
     console.log(iconurl);
-    $(".city").html("<h1>" + response.name + ": " + startDate.format('dddd') + ",  " + startDate.format('LL') + "</h1>");
-    $(".icon").append("<img src='" + iconurl  + "'>");
+    $(".city").html("<h1>" + response.name + " </h1>");
+    $(".time").html("<h3>" + startDate.format('dddd') + ",  " + startDate.format('LL') + "</h3>");
+    $(".icon").append("<img src='" + iconurl  + "' >");
     $(".wind").text("Wind Speed: " + response.wind.speed.toFixed(0) + " mph");
     $(".humidity").text("Humidity: " + response.main.humidity + "%");
     $(".temp").text("Temperature: " + tempF.toFixed(0) + "°F");
@@ -105,18 +106,18 @@ function fiveDayForecast(response) {
             iterator = iterator + 1;
             //console.log(iterator);
             var tempF = (response.list[i].main.temp - 273.15) *1.80 +32;
-            $("#dayContainer").append("<div class='column' id='dayColumn'><div id='forecastBox'><p id='time" + iterator + "'></p> <div class='weatherIcon" + iterator + "day'></div><div class='temp" + iterator + "day'></div><div class='humidity" + iterator + "day'></div></div>'");
+            $("#dayContainer").append("<div class='column' id='dayColumn'><div id='forecastBox'><p id='time" + iterator + "'><hr></p> <div class='weatherIcon" + iterator + "day'></div><div class='temp" + iterator + "day'></div><div class='humidity" + iterator + "day'></div></div>'");
            
-            /*var iconcode = response.list[i].main.weather[0].icon;
-            console.log(iconcode);
-            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
-            console.log(iconurl);*/
+            var uconcode = response.list[i].weather[0].icon;
+            //console.log(uconcode);
+            var uconurl = "https://openweathermap.org/img/w/" + uconcode + ".png";
+            //console.log(uconurl);
             
             //$(".icon").append("<img src='" + iconurl  + "'>");
             
             var weatherData = ".weatherIcon" + iterator + "day";
             //console.log(weatherData);
-            //$(weatherData).append("<img src='" + iconurl  + "'>");
+            $(weatherData).append("<img src='" + uconurl  + "'>");
             var humidityData = ".humidity" + iterator + "day";
             //console.log(humidityData);
             $(humidityData).text("Humidity: " + response.list[i].main.humidity + "%");

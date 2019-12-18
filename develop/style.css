@@ -5,10 +5,46 @@ body{
     border-radius:.25rem;
 }
 
-img {
+.weatherIcon {
     float:right;
     width:200px;
     height:200px;
+    margin-left:25%;
+    margin-right:25%;
+    
+}
+.locationAndDate{
+    display:flex;
+}
+.currentIcon{
+    float:right;
+    width:200px;
+    height:200px;
+    margin-left:25%;
+    margin-right:25%;
+}
+
+hr {
+    border:1px solid white;
+}
+img{
+    margin-left:30%;
+}
+.icon img{
+    float:right;
+    width:250px;
+    height:250px;
+    padding-bottom:20px;
+    margin-right:5%;
+    margin-top: -10%; 
+}
+
+.time{
+    
+}
+
+h1{
+    width:50%;
 }
 h4{
     margin:10px 0px 0px 0px;
