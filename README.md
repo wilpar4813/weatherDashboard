@@ -6,18 +6,17 @@
 - Published: Thursday December 19th 2019
 
 # Configuration instructions
+* No installation necessary. Any main stream browser can be used.
+
+# Screenshots
+![Weather Image](./assets/weather.png)
 
 ### Goto the following link:
 
 https://wilpar4813.github.io/weatherDashboard/
 
 
-# Installation instructions
-
-* No installation necessary. Any main stream browser can be used.
-
 # Operating instructions
-
 * On the home screen you will be able to enter a city name to search for current weather data, as well as a 5 day forcast for that city.  
 * As cities looked up the are saved in a list below the search bar.
 * Clicking cities in the hitory list will propulate the current weather and 5 day forecast fields with that city data.
