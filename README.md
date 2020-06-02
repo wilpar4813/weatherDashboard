@@ -47,9 +47,8 @@ https://github.com/wilpar4813/weatherDashboard
 
 ## Copyright and licensing information
 
-* Cloud background 
-  * image came from the following site:
-    * https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
+* Cloud background image from:
+  https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
 
 # Contact information for the distributor or programmer
 
