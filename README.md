@@ -1,15 +1,18 @@
 # Weather Dashboard
 
-* READ ME 
-- Version: 1.0.0 
-- Web Design By Tripp Parham 
-- Published: Thursday December 19th 2019
+## READ ME 
+* Version: 1.0.0 
+* Web Design By Tripp Parham 
+* Published: Thursday December 19th 2019
 
-# Configuration instructions
-* No installation necessary. Any main stream browser can be used.
+# Description
+As an active person, the need to know the weather is a big deal.  Use this weather dashboard to search cities for current weather conditions and the future weather outlook for multiple cities. This app utilizes HTML, CSS, and Javascript.
 
 # Screenshots
 ![Weather Image](./assets/weather.png)
+
+# Configuration instructions
+* No installation necessary. Any main stream browser can be used.
 
 ### Goto the following link:
 
