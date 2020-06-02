@@ -47,14 +47,9 @@ https://github.com/wilpar4813/weatherDashboard
 
 ## Copyright and licensing information
 
-* Cloud background image came from the following site:
-  https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
-
-* Search Icon came from:
-  https://thenounproject.com/term/search/1609001/
-* Search 
-* By Rohith M S, IN 
-* Creative Commons
+* Cloud background 
+  * image came from the following site:
+        https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
 
 # Contact information for the distributor or programmer
 
