@@ -1,80 +1,74 @@
-# weatherDashboard
-HW #6
+# Weather Dashboard
 
-***DayPlanner***
-
-- READ ME 
-- Homework 6
-- weatherDashboard
+* READ ME 
 - Version: 1.0.0 
 - Web Design By Tripp Parham 
 - Published: Thursday December 19th 2019
 
-***Configuration instructions***
+# Configuration instructions
 
--Goto the following link:
+### Goto the following link:
 
 https://wilpar4813.github.io/weatherDashboard/
 
 
-***Installation instructions***
+# Installation instructions
 
-- No installation necessary. Any main stream browser can be used.
+* No installation necessary. Any main stream browser can be used.
 
-***Operating instructions***
+# Operating instructions
 
-- On the home screen you will be able to enter a city name to search for current weather data, as well as a 5 day forcast for that city.  
-- As cities looked up the are saved in a list below the search bar.
--Clicking cities in the hitory list will propulate the current weather and 5 day forecast fields with that city data.
-- User history list is saved to local storage.
-- User can click the "Clear History" button at anytime to remove all cities in the history list for local storage.
-
-
-***List of files included in the following structure***
-
-- README.md (Read for information on site development) 
-- FORME.md  (Development use only)
-- index.html  
-- assets folder
-    - kissclipart-magnifying-glass-search-icon-clipart-magnifying-gl-8c16bee5a1dfb0a5.png
-    - nature-sky-clouds-blue-53594.jpg
-- develop folder
-    - style.css
-    - script.js
-- lib folder
-  - moment..min.js
+* On the home screen you will be able to enter a city name to search for current weather data, as well as a 5 day forcast for that city.  
+* As cities looked up the are saved in a list below the search bar.
+* Clicking cities in the hitory list will propulate the current weather and 5 day forecast fields with that city data.
+* User history list is saved to local storage.
+* User can click the "Clear History" button at anytime to remove all cities in the history list for local storage.
 
 
-***Copyright and licensing information***
+## List of files included in the following structure
 
-- Cloud background image came from the following site:
-https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
+* README.md (Read for information on site development) 
+* FORME.md  (Development use only)
+* index.html  
+* assets folder
+    * kissclipart-magnifying-glass-search-icon-clipart-magnifying-gl-8c16bee5a1dfb0a5.png
+    * nature-sky-clouds-blue-53594.jpg
+* develop folder
+    * style.css
+    * script.js
+* lib folder
+  * moment.min.js
 
--Search Icon came from:
-https://thenounproject.com/term/search/1609001/
-Search 
-By Rohith M S, IN 
-Creative Commons
 
-***Contact information for the distributor or programmer***
+## Copyright and licensing information
 
-Site Developer: Tripp Parham Email: tripp.parham@me.com 
+* Cloud background image came from the following site:
+  * https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
 
-***Known bugs[0]***
+* Search Icon came from:
+  * https://thenounproject.com/term/search/1609001/
+* Search 
+* By Rohith M S, IN 
+* Creative Commons
 
-***Troubleshooting[3]***
-- Cities are correctly accepted for the search barl
-- Cities corretly appear in the history list.
-- The "Clear History" button correctly clears the city history
-- City history array stores and reloads correctly from local storage after browser refresh.
-- The current weather for cities searched from the search bar and the 5 day forecast are displayed correctly.
+# Contact information for the distributor or programmer
 
-***Credits and acknowledgments***
+* Site Developer: Tripp Parham 
+* Email: tripp.parham@me.com 
 
-Special thanks to the Instructors and TA's at the UNC Coding Bootcamp. They are an awesome team.:-) Also I couldn't have completed this project without my tutor, Karen Largent. Thanks to my Mom in heaven that paid for my Bootcamp. Also special thanks to my wife, who hasn't seen me much recently, for her kind patience in dealing with my coding frustrations.
+# Known bugs[0]
 
-***Change Log***
+# Troubleshooting[3]
+* Cities are correctly accepted for the search barl
+* Cities corretly appear in the history list.
+* The "Clear History" button correctly clears the city history
+* City history array stores and reloads correctly from local storage after browser refresh.
+* The current weather for cities searched from the search bar and the 5 day forecast are displayed correctly.
 
-***Site Updates***
+# Credits and acknowledgments
 
--Verion 1.0.0 Released THursday December 19th 2019
+### Special thanks to the Instructors and Staff at the UNC Coding Bootcamp. They are an awesome team.:-) I recommnend Trilogy to anyone that wants to learn Javascript Web Development. They have a fine tuned program and lots of great resources.
+
+# Site Updates
+
+* Verion 1.0.0 Released THursday December 19th 2019
