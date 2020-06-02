@@ -49,7 +49,7 @@ https://github.com/wilpar4813/weatherDashboard
 
 * Cloud background 
   * image came from the following site:
-        https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
+    * https://www.pexels.com/photo/nature-sky-clouds-blue-53594/
 
 # Contact information for the distributor or programmer
 
