@@ -15,6 +15,9 @@
 
 https://wilpar4813.github.io/weatherDashboard/
 
+### Code is stored at the following Github repository:
+
+https://github.com/wilpar4813/weatherDashboard
 
 # Operating instructions
 * On the home screen you will be able to enter a city name to search for current weather data, as well as a 5 day forcast for that city.  
