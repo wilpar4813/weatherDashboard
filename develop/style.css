@@ -225,3 +225,40 @@ header{
     display: flex;
 }
 
+@media only screen and (max-width: 1000px) {
+    #dayContainer{
+        display:block;
+        overflow-x: hidden;
+        height: 600px;
+    }
+    #dayColumn{
+        width:80%;
+        margin-left: auto;
+        margin-right:auto ;
+        height:auto;
+    }
+    #borderBox{
+        height:55%;
+    }
+    #currentWeatherRow{
+        height: auto;
+    }
+
+    #forecastBox{
+        height: 30%;
+    }
+
+    #weatherColumn{
+        height:100%;
+    }
+
+    .icon img{
+        width:150px;
+        height: 150px;
+        padding-bottom:0px;
+        margin-right: 0px;
+    }
+    img{
+        float: right;
+    }
+}
