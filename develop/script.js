@@ -2,6 +2,7 @@ $(document).ready(function () {
     writeToSchedule();
     // localStorage.clear();
     cities = JSON.parse(localStorage.getItem("cities")) || [];
+    
     $('#submitWeather').click(function (event) {
         // event.preventDefault() prevents the form from trying to submit itself.
         // We're using a form so that the user can hit enter instead of clicking the button if they want
@@ -37,6 +38,10 @@ $(document).ready(function () {
         getTheWeather(city);
 
     });
+
+
+    
+
     $(document).on("click", ".fatCity", function () {
         //console.log("fatCity button pushed");
         var city = $(this).attr("data-name");
@@ -176,8 +181,12 @@ function writeToSchedule() {
     cities = JSON.parse(localStorage.getItem("cities")) || [];
     // Deleting the city buttons prior to adding new city buttons
     // (this is necessary otherwise we will have repeat buttons)
+    console.log(cities[0]);
+    $("#locale").val(cities[0]);
+    getTheWeather(cities[0]);
+    // $("#locale").val().text(cities[0]);
     $("#buttons-view").empty();
-    // Looping through the array of movies
+    // Looping through the array of cities
     for (var i = 0; i < cities.length; i++) {
 
         // Then dynamicaly generating buttons for each movie in the array.
