@@ -59,6 +59,7 @@ h4{
 #locale{
     font-weight: 700;
     width:70%;
+    margin: 0px !important;
 }
 .navbar-brand{
     color:white !important;
@@ -68,17 +69,20 @@ h4{
 .form-inline{
     display:flex;
     width:100%;
+    margin-right:125px;
 }
 .form-control{
     width:61%;
     float:left;
+    margin-right: 0px;
 }
 
 #navbarDropdown{
     float:right !important;
 }
-#weatherHeader{
-    
+
+a:hover{
+    background: transparent !important;
 }
 
 #dashboardContainer{
@@ -133,7 +137,7 @@ h4{
     /* float:right; */
     margin-left: auto;
     margin-right: auto;
-    width:75%;
+    width:90%;
 }
 
 #currentWeatherRow{
@@ -158,8 +162,8 @@ h4{
 }
 #fiveDayRow{
     padding-left:10px;
-    margin:10px auto;
-    padding:10px;
+    margin-top: 30px;
+    padding-top:30px;
     width:auto;
  
     color:white;
@@ -169,10 +173,13 @@ h4{
 
 #fiveDayRow > h3 {
     border-radius: 15px;
-    background:black;
+    background:rgba(0, 0, 0, 0.516);
     margin-right: auto;
     margin-left: auto;
-    padding:10px;
+    padding:20px;
+    text-align: center;
+    width:400px;
+    /* font-weight: bolder !important; */
 }
 
 #dayContainer{
@@ -227,6 +234,8 @@ h4{
     float: left;
     color:white;
 }
+
+
 #buttons-view{
     position: relative;
     width:100%;
@@ -240,16 +249,18 @@ h4{
     background-repeat: no-repeat;
     padding:2px 10px 2px 10px;
     background-position: center; 
-    background:black;
-    border-radius: .25rem;
+    background:red;
+    border-radius: 15px;
     height:30px;
-    width:60%;
-    color: white;
+    width:100%;
+    color: black;
     font-weight: bolder;
     margin-top:5px !important;
     margin-left: auto;
     margin-right:auto;
 }
+
+
 #dataValue{
     width:auto;
     text-align: center;
