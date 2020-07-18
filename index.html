@@ -4,59 +4,78 @@
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="develop/style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <title>Weather Dashboard</title>
+
     </head>
     <body>
         <nav class="navbar navbar-dark s bg-dark justify-content-between">
             <a class="navbar-brand">Weather Dashboard</a>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" id="locale" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" id="submitWeather" type="submit"></button>
-            </form>
-          </nav>
-        
-        <div
-            class="container" id="dashboardContainer">
-            <!-- DEFINES FIRST COLUMN -->
-            <div class="column" id="citySearchColumn">
-                <div class="row" id="searchBarRow">
-                    <h4>History:</h4>
-                    
-                    <div id="error"></div>
-                </div>
-                <div class="row" id="historyRow">
-                        <div id="buttons-view"></div>
-                        <button class="btn btn-outline-success my-2 my-sm-0" id="clearStorage" type="button">Clear History</button>
-                </div>
-            </div>
-            <!-- DEFINES FIRST COLUMN -->
-            <div class="column" id="weatherColumn">
-                <div class="row" id="currentWeatherRow">
-                    <div id="borderBox">
-                    
-                            <div class="city"></div>
-                            <div class="time"></div>
-                            <div class="icon"></div>
-                            <div class="temp"></div>
-                            <div class="humidity"></div>
-                            <div class="wind"></div>
-                            <div class="uvIndex"><p id="uvValue"></p></div>
-                            
+            <!-- <div class="navbar-nav"> -->
+                <div class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Recent
+                    </div>
+                    <div>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">
+                                <div id="buttons-view"></div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <button class="btn btn-outline-success my-2 my-sm-0" id="clearStorage" type="button">Clear</button>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row" id="fiveDayRow">
-                    <h3>5-Day Forecast:</h3>
+                <div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" id="locale" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" id="submitWeather" type="submit"></button>
+                    </form>
                 </div>
-                <div class="row" id="dayContainer">
-                <!-- Results from fiveDayForecast() go here -->
-                </div>
-            </body>
-        </html>
-        
-        <script src="lib/moment..min.js"></script>
-        <script src="develop/script.js"></script>
+            <!-- </div> -->
+        </div>
     </body>
-</html>
+</html></nav><div
+class="container" id="dashboardContainer">
+<!-- DEFINES FIRST COLUMN -->
+<!--<div class="column" id="citySearchColumn">
+    <div class="row" id="searchBarRow">
+        <h4>History:</h4>
+
+        <div id="error"></div>
+    </div>
+    <div class="row" id="historyRow">
+        <div id="buttons-view"></div>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="clearStorage" type="button">Clear</button>
+    </div>
+</div>-->
+<!-- DEFINES FIRST COLUMN -->
+<div class="column" id="weatherColumn">
+    <div class="row" id="currentWeatherRow">
+        <div id="borderBox">
+
+            <div class="city"></div>
+            <div class="time"></div>
+            <div class="icon"></div>
+            <div class="temp"></div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
+            <div class="uvIndex">
+                <p id="uvValue"></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="row" id="fiveDayRow">
+        <h3>5-Day Forecast</h3>
+    </div>
+    <div
+        class="row" id="dayContainer"><!-- Results from fiveDayForecast() go here -->
+    </div>
+</body></html><!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="lib/moment..min.js"></script><script src="develop/script.js"></script></body></html>
