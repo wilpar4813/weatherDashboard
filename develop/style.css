@@ -4,7 +4,7 @@ body{
     background-image: url(../assets/nature-sky-clouds-blue-53594.jpg);
     border-radius:.25rem;
     margin-bottom: 60px;
-    padding-bottom: 120px;
+    /* padding-bottom: 120px; */
 }
 body > .container {
     padding: 80px 15px 100px;
@@ -94,6 +94,7 @@ a:hover{
     /* border:1px solid #cccccc; */
     margin-top:20px;
     padding-bottom: 60px;
+    padding-top:0px;
     /* display:flex; */
 
 }
@@ -171,6 +172,7 @@ a:hover{
     
     color:white;
     height:7%;
+    margin-bottom:60px;
     
     
 }
@@ -279,6 +281,7 @@ a:hover{
 #uvValue{
     display: flex;
     width:100%;
+    margin-top:10px;
 }
 
 .footer{
@@ -333,7 +336,5 @@ a:hover{
         padding-bottom:0px;
         margin-right: 0px;
     }
-    img{
-        float: right;
-    }
+    
 }
