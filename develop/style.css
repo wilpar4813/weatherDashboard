@@ -55,18 +55,12 @@ h4{
     padding:0px;
     text-align: center;
 }
-header{
-    background:rgb(41, 43, 44);
-    color:white;
-    
-    max-width: 100%;
-    font-family: 'Arial','Helvetica Neue','Helvetica', 'sans-serif';
-   font-size:2em;
-   font-weight: bolder;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+
+
+.navbar-brand{
+    color:white !important;
+    font-size: 30px !important;
+    font-weight: bolder;
 }
 .form-inline{
     display:flex;
@@ -78,11 +72,13 @@ header{
 }
 
 #weatherHeader{
-    margin-top:5%;
+    
 }
-    #dashboardContainer{
+
+#dashboardContainer{
     background: gray;
     /* border:1px solid #cccccc; */
+    margin-top:20px;
     display:flex;
 }
 
@@ -215,14 +211,16 @@ header{
     margin-right:auto;
 }
 #dataValue{
-    width:45px;
+    width:auto;
     text-align: center;
     margin-left: 0px;
     border-radius: .25rem;
+    padding:0 5px;
 }
 
 #uvValue{
     display: flex;
+    width:100%;
 }
 
 @media only screen and (max-width: 1000px) {
