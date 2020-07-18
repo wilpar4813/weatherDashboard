@@ -63,6 +63,7 @@ $(document).ready(function () {
 });
 $('#clearStorage').click(function (event) {
     clearStorage();
+    $("#dashboardContainer").hide();
 });
 
 // var APIKey = "05704eed827c348a42aefa846e03d80c";
