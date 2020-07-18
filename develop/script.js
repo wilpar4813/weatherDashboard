@@ -1,8 +1,14 @@
 $(document).ready(function () {
+    
     writeToSchedule();
     // localStorage.clear();
     cities = JSON.parse(localStorage.getItem("cities")) || [];
-    
+    if(cities.length<1){
+        $("#dashboardContainer").hide();
+    }
+    else{
+        $("#dashboardContainer").show();
+    }
     $('#submitWeather').click(function (event) {
         // event.preventDefault() prevents the form from trying to submit itself.
         // We're using a form so that the user can hit enter instead of clicking the button if they want
@@ -14,10 +20,13 @@ $(document).ready(function () {
         // Create array to store high scores
         cities = JSON.parse(localStorage.getItem("cities")) || [];
 
+       
+
         //console.log(cities);empty
 
         // add new city to cities
         if (newCity != "") {
+            $("#dashboardContainer").show();
             cities.unshift(newCity);
             cities = Array.from(new Set(cities));
             if (cities.length >= 12) {
@@ -182,6 +191,9 @@ function writeToSchedule() {
     // Deleting the city buttons prior to adding new city buttons
     // (this is necessary otherwise we will have repeat buttons)
     console.log(cities[0]);
+//   if(cities.length!=0){
+   
+    
     $("#locale").val(cities[0]);
     getTheWeather(cities[0]);
     // $("#locale").val().text(cities[0]);
@@ -201,6 +213,10 @@ function writeToSchedule() {
         // Adding the button to the HTML
         $("#buttons-view").append(a);
     }
+// }else{
+//     $("#dashboardContainer").hide();
+    
+// }
 
 }
 function getTheWeather(city) {
