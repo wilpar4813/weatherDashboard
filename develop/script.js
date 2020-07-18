@@ -174,7 +174,7 @@ function renderButtons() {
 }
 
 function postUV(data) {
-    $("#uvValue").html("UV Index: <div id = 'dataValue'>" + data.value + "</div>");
+    $("#uvValue").html("<strong>UV Index: </strong><div id = 'dataValue'>" + data.value + "</div>");
     if (data.value > 7) {
         //console.log(data.value);
         $('#dataValue').css('background', 'red');
