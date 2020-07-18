@@ -111,7 +111,7 @@ function fiveDayForecast(response) {
             iterator = iterator + 1;
             //console.log(iterator);
             var tempF = (response.list[i].main.temp - 273.15) *1.80 +32;
-            $("#dayContainer").append("<div class='column' id='dayColumn'><div id='forecastBox'><p id='time" + iterator + "'><hr></p> <div class='weatherIcon" + iterator + "day'></div><div class='temp" + iterator + "day'></div><div class='humidity" + iterator + "day'></div></div>'");
+            $("#dayContainer").append("<div class='column' id='dayColumn'><div id='forecastBox'><p id='time" + iterator + "'><hr></p> <div class='weatherIcon" + iterator + "day'></div><div class='temp" + iterator + "day'></div><div class='humidity" + iterator + "day'></div></div>");
            
             var uconcode = response.list[i].weather[0].icon;
             //console.log(uconcode);

@@ -13,12 +13,20 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-dark s bg-dark justify-content-between">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
             <a class="navbar-brand">Weather Dashboard</a>
             <!-- <div class="navbar-nav"> -->
+                <div>
+                    <form class="form-inline">
+                        <input class="form-control mr-lg-4" type="search" id="locale" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" id="submitWeather" type="submit"></button>
+                    </form>
+                </div>
+              
                 <div class="nav-item dropdown">
+                    
                     <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Recent
+                        Recent Cities
                     </div>
                     <div>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -32,12 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" id="locale" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" id="submitWeather" type="submit"></button>
-                    </form>
-                </div>
+                
+               
             <!-- </div> -->
         </div>
     </body>
@@ -75,7 +79,10 @@ class="container" id="dashboardContainer">
     <div class="row" id="fiveDayRow">
         <h3>5-Day Forecast</h3>
     </div>
-    <div
-        class="row" id="dayContainer"><!-- Results from fiveDayForecast() go here -->
+    <div class="row" id="dayContainer"><!-- Results from fiveDayForecast() go here -->
     </div>
+
+
+  
+
 </body></html><!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="lib/moment..min.js"></script><script src="develop/script.js"></script></body></html>

@@ -56,7 +56,10 @@ h4{
     text-align: center;
 }
 
-
+#locale{
+    font-weight: 700;
+    width:70%;
+}
 .navbar-brand{
     color:white !important;
     font-size: 30px !important;
@@ -64,13 +67,16 @@ h4{
 }
 .form-inline{
     display:flex;
-    /* width:100%; */
+    width:100%;
 }
 .form-control{
     width:61%;
     float:left;
 }
 
+#navbarDropdown{
+    float:right !important;
+}
 #weatherHeader{
     
 }
@@ -142,6 +148,7 @@ h4{
 #borderBox{
     background:transparent;
     border:1px solid #cccccc;
+    color:white;
     border-radius:.25rem;
     height:90%;
     width:100%;
@@ -151,13 +158,21 @@ h4{
 }
 #fiveDayRow{
     padding-left:10px;
-    margin:10px;
-    width:100%;
-   border-radius: 15px;
-    background:black;
+    margin:10px auto;
+    padding:10px;
+    width:auto;
+ 
     color:white;
     height:7%;
     
+}
+
+#fiveDayRow > h3 {
+    border-radius: 15px;
+    background:black;
+    margin-right: auto;
+    margin-left: auto;
+    padding:10px;
 }
 
 #dayContainer{
@@ -178,6 +193,13 @@ h4{
     background:transparent;
 }
 
+.dropdown-menu{
+    background:rgba(0, 0, 0, 0.516);
+    
+}
+.dropdown-item{
+    font-weight: bold;
+}
 #forecastBox{
     background:#3385ff;
     border-radius:15px;
@@ -189,11 +211,16 @@ h4{
 }
 /* .fatCity is class id for city history buttons */
 .fatCity{
-    background:white;
+    background:black;
+    color:white;
+    border-radius: 15px;
     width:100%;
     padding:5px;
     margin-top:5px;
+    padding-left: 10px;
     display:flex;
+    font-weight: bold;
+    /* text-align: center; */
 }
 
 .dropdown{
@@ -203,6 +230,7 @@ h4{
 #buttons-view{
     position: relative;
     width:100%;
+    
 }
 
 #clearStorage{
@@ -225,7 +253,7 @@ h4{
 #dataValue{
     width:auto;
     text-align: center;
-    margin-left: 0px;
+    margin-left: 10px;
     border-radius: .25rem;
     padding:0 5px;
 }
