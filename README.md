@@ -6,9 +6,15 @@
 * Published: Thursday December 19th 2019
 
 # Description
-As an active person, the need to know the weather is a big deal.  Use this weather dashboard to search cities for current weather conditions and the future weather outlook for multiple cities. This app utilizes HTML, CSS, and Javascript.
+As an active person, the need to know the weather is a big deal.  Use this weather dashboard to search cities for current weather conditions and the future weather outlook for multiple cities. This app utilizes HTML, CSS, Bootstrap, Javascript, API calls, anbd responsive design.
 
 # Screenshots
+## Version 2.0
+
+![Weather Image](./assets/weatherV2.png)
+
+## Version 1.0
+
 ![Weather Image](./assets/weather.png)
 
 # Configuration instructions
